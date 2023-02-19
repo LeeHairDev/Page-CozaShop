@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/css/features.css" />
+    <link rel="icon" href="src/img/features/logo-web.png" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <title>Shoping Cart</title>
+  </head>
+  <body>
+    <div class="container">
+      <div id="main">
+        <div id="header">
+          <div class="header-top">
+            <div class="content-header-top">
+              <div class="left-title">
+                <h4>Free shipping for standard order over $100</h4>
+              </div>
+              <div class="right-menu">
+                <ul>
+                  <li><a href="">Help & FAQs</a></li>
+                  <li><a href="">My Account</a></li>
+                  <li><a href=""> EN</a></li>
+                  <li><a href=""> USD</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header-bottom">
+          <div class="content-header-bottom">
+            <div class="nav">
+              <div class="logo-img">
+                <img src="src/img/features/logo.jpg" alt="" />
+              </div>
+              <div class="list-menu">
+                <ul>
+                  <li>
+                    <a href="index.html">Home</a>
+                    <ul id="menu-sub">
+                      <li><a href="">Home Page 1</a></li>
+                      <li><a href="">Home Page 2</a></li>
+                      <li><a href="">Home Page 3</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="shop.html">Shop</a></li>
+                  <li><a href="Features.html">Features</a></li>
+                  <li><a href="Blog.html">Blog</a></li>
+                  <li><a href="About.html">About</a></li>
+                  <li><a href="Contact.html">Contact</a></li>
+                </ul>
+              </div>
+              <div class="icon">
+                <i class="bx bx-search"></i>
+                <i class="bx bxs-cart-alt"></i>
+                <i class="bx bx-heart"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="content">
+        <div class="title_content">
+          <span>Home </span> <i class="bx bx-chevron-right"></i
+          ><span id="sp2"> Shoping Cart</span>
+        </div>
+       <div class="grid_bill width">
+        <div class="bill">
+          <table class="table">
+            <tbody>
+              <tr>
+                <th>PRODUCT</th>
+                <th>PRICE</th>
+                <th>QUANTITY</th>
+                <th>TOTAL</th>
+              </tr>
+              <tr>
+                <td class="img_text">
+                  <img src="src/img/features/sp1.jpg" alt="" /><span>
+                    Fresh Strawberries</span
+                  >
+                </td>
+                <td>$ 36.00</td>
+                <td>
+                  <div class="count">
+                    <button onclick="clicknumber(-1);" id="left">
+                      <i class="bx bx-minus"></i></button
+                    ><span id="count">0</span
+                    ><button onclick="clicknumber(1)" id="right">
+                      <i class="bx bx-plus"></i>
+                    </button>
+                  </div>
+                </td>
+                <td>$ 36.00</td>
+              </tr>
+              <tr>
+                <td class="img_text">
+                  <img src="src/img/features/sp2.jpg" alt="" /><span>
+                    Fresh Strawberries</span
+                  >
+                </td>
+                <td>$ 16.00</td>
+                <td>
+                  <div class="count">
+                    <button onclick="clicknumber2(-1);" id="left">
+                      <i class="bx bx-minus"></i></button
+                    ><span id="count2">0</span
+                    ><button onclick="clicknumber2(1)" id="right">
+                      <i class="bx bx-plus"></i>
+                    </button>
+                  </div>
+                </td>
+                <td>$ 16.00</td>
+              </tr>
+              <tr id="ip_bt">
+                <td><input type="text" placeholder="Coupon Code" /></td>
+                <td><button>APPLY COUPON</button></td>
+                <td><button>UPDATE CATE</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="right_bill">
+          <div class="title_right_bill">
+            <h2>CART TOTALS</h2>
+            <label>
+              Subtotal: <span>$79.65</span>
+            </label>
+          </div>
+            <div class="mid_content">
+              <label>
+                Shipping:
+              </label>
+              <div class="right_mid_content">
+                <p>
+                  There are no shipping methods available. Please double check
+                  your address, or contact us if you need any help.
+                </p>
+                <span>CALCULATE SHIPPING</span><br>
+                <select name="" id="">
+                  <option value="">Select a country...</option>
+                  <option value="">USA</option>
+                  <option value="">UK</option>
+                </select><br>
+                <input id="ip1" type="text" placeholder="State/country"><br>
+                <input type="text" placeholder="Postcode/zip">
+                <button>UPDATE TOTALS</button>
+              </div>
+            </div>
+            <label id="end" for="">Totals: <span>$79.65</span></label><br>
+            <button id="bt_end">Proceed to Checkout</button>
+          </div>
+        </div>
+       </div>
+      </div>
+      <div id="footer">
+        <div class="content-footer">
+          <div class="content-footer-grid">
+            <div class="categories-footer">
+              <h2>CATEGORIES</h2>
+              <p>Women</p>
+              <p>men</p>
+              <p>Shoes</p>
+              <p>Watches</p>
+            </div>
+
+            <div class="hep-footer">
+              <h2>HELP</h2>
+              <p>Track Order</p>
+              <p>Returns</p>
+              <p>Shipping</p>
+              <p>FAQs</p>
+            </div>
+
+            <div class="get-in-touch">
+              <h2>GET IN TOUCH</h2>
+              <p>
+                Thôn Chính Bình - Xã Đông Hòa - Huyện Đông Sơn - Tỉnh Thanh Hóa
+              </p>
+              <p>(+84) 96 716 6879</p>
+              <div class="icon-get">
+                <i class="bx bxl-facebook-circle"></i>
+                <i class="bx bxl-instagram"></i>
+                <i class="bx bxl-pinterest-alt"></i>
+              </div>
+            </div>
+
+            <div class="newsletter">
+              <h2>NEWSLETTER</h2>
+              <div class="input-newsletter">
+                <input type="text" placeholder="email@example.com" />
+                <span></span>
+              </div>
+              <div class="button-newsletter">
+                <button>Subscribe</button>
+              </div>
+            </div>
+          </div>
+          <div class="img-text-footer">
+            <div class="img-atm-footer">
+              <img src="src/img/features/xicon-pay-01.png" alt="" />
+              <img src="src/img/features/xicon-pay-02.png" alt="" />
+              <img src="src/img/features/xicon-pay-03.png" alt="" />
+              <img src="src/img/features/xicon-pay-04.png" alt="" />
+              <img src="src/img/features/xicon-pay-05.png" alt="" />
+            </div>
+            <p>
+              Copyright ©2022 All rights reserved | This template is made with
+              <i class="bx bx-heart"></i>by<a href="">Colorlib</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="src/js/feature.js"></script>
+  </body>
+</html>
