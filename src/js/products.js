@@ -1,54 +1,3 @@
-"use strict";
-
-const $ = document.querySelector.bind(document);
-const $$ = document.querySelectorAll.bind(document);
-
-
-// scroll header
-window.addEventListener('scroll', () => {
-  // const header_top = $('.content-header-top');
-  const nav = $('.content-header-bottom');
-
-  if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
-    nav.style.top = '0';
-    nav.style.backgroundColor = '#ffffff';
-    nav.style.padding = '2px 0';
-    nav.style.transition = " .4s linear";
-  } else {
-    nav.style.top = '50px';
-    nav.style.backgroundColor = 'transparent';
-    nav.style.padding = '0';
-  }
-})
-
-// silder 
-
-var album = [
-  "src/img/shop/product-detail-01.jpg",
-  "src/img/shop/product-detail-02.jpg",
-  "src/img/shop/product-detail-03.jpg",
-]
-var currentIndex = 0;
-function slideshow() {
-  if (currentIndex > 2) {
-    currentIndex = 0;
-  }
-  document.getElementById("anh").src = album[currentIndex];
-  currentIndex++;
-  setTimeout("slideshow()", 5000);
-}
-  var left = function(x){
-   currentIndex += Number(x);
-   if ( currentIndex > 2){
-     currentIndex = 0;
-   }
-   if ( currentIndex < 0){
-     currentIndex = 2;
-   }
-    document.getElementById("anh").src = album[currentIndex];
-   }
-  slideshow();
-
 const products = [
   {
     id: 1,
@@ -95,22 +44,22 @@ products.forEach(product=> { // Duyệt qua từng sản phẩm trong mảng pro
     // Tạo HTML cho mỗi sản phẩm
     // Sử dụng template string để dễ dàng chèn giá trị vào HTML
     const productHTML = ` 
-        <div class="img-button-text-product">
-                  <div class="img-button">
-                    <img src="${product.image}" alt="${product.image}" />
-                    <button onclick="showProduct(${product.id})">Quick View</button>
+    <div class="img-button-text-product">
+                <div class="img-button">
+                  <img src="${product.image}" alt="${product.image}" />
+                  <button onclick="showProduct(${product.id})">Quick View</button>
+                </div>
+                <div class="text-product">
+                  <div class="text-left">
+                    <span>${product.name}</span>
+                    <h3>${formatPrice(product.price)}</h3>
                   </div>
-                  <div class="text-product">
-                    <div class="text-left">
-                      <span>${product.name}</span>
-                      <h3>${formatPrice(product.price)}</h3>
-                    </div>
-                   
-                  </div>
-                  <div class="button">
-                      <button onclick="showProduct(${product.id})"> <p>Quick View</p> </button>
+                  <div class="icon">
+                    <i id="heart-1" class="bx bx-heart"></i>
+                    <i id="heart-2" class="bx bxs-heart"></i>
                   </div>
                 </div>
+              </div>
     `;
     container.innerHTML += productHTML; // Thêm HTML của sản phẩm vào container
     // Nối chuỗi HTML của sản phẩm vào container
@@ -221,12 +170,4 @@ function formatPrice(price) {
     } return;
   }
 
-// Number++
-function clicknumber(click){
-  const totalcilck =document.querySelector('#count');
-  const sumvalue = parseInt(totalcilck.innerText) + click;
-  totalcilck.innerText = sumvalue;
-  if (sumvalue < 0){
-    totalcilck.innerText = 0;
-  }
-}
+

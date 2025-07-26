@@ -21,49 +21,8 @@ window.addEventListener('scroll', () => {
   }
 })
 
-// silder 
+  
 
-var album = [
-  "src/img/shop/product-detail-01.jpg",
-  "src/img/shop/product-detail-02.jpg",
-  "src/img/shop/product-detail-03.jpg",
-]
-var currentIndex = 0;
-function slideshow() {
-  if (currentIndex > 2) {
-    currentIndex = 0;
-  }
-  document.getElementById("anh").src = album[currentIndex];
-  currentIndex++;
-  setTimeout("slideshow()", 5000);
-}
-  var left = function(x){
-   currentIndex += Number(x);
-   if ( currentIndex > 2){
-     currentIndex = 0;
-   }
-   if ( currentIndex < 0){
-     currentIndex = 2;
-   }
-    document.getElementById("anh").src = album[currentIndex];
-   }
-  slideshow();
-  
-  //  product button
-  document.getElementById('product_sp').style.display = "none"
-  function showProduct() {
-    var x = document.getElementById('product_sp');
-    console.log([x]);
-  
-    if (x.style.display == "flex") {
-      x.style.display = "none"
-      x.style.transition = ".6s";
-    } else {
-      x.style.display = "flex"
-      x.style.justifyContent = "center"
-      x.style.alignItems = "center"
-    }
-  }
   
 // Number++
 function clicknumber(click){
